@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>VRaptor Blank Project</title>
+<title>Controle de Horas</title>
 </head>
 <body>
-	It works!! ${variable} ${linkTo[IndexController].index}
+	Bem vindo ao Sistema de Controle de Horas!
 </body>
 </html>

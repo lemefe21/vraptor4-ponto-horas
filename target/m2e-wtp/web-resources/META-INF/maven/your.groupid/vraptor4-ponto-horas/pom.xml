@@ -6,7 +6,7 @@
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 
-	<description>A blank project to start using VRaptor 4</description>
+	<description>VRaptor 4 - Controle de Horas</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +44,18 @@
 			<artifactId>hibernate-validator-cdi</artifactId>
 			<version>5.1.1.Final</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.6.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.17</version>
+		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -67,7 +79,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>your.groupid</finalName>
+		<finalName>vraptor4-ponto-horas</finalName>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
