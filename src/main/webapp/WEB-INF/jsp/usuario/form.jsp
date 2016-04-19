@@ -3,6 +3,9 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp"/>
 
-	Bem vindo Olá ao Sistema de Controle de Horas!
+	<form action="${linkTo[UsuarioController].adiciona(null)}" method="post">
+	
+	
+	</form>
 	
 <c:import url="/WEB-INF/jsp/footer.jsp"/>
