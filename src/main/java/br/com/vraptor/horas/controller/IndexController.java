@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.controller;
+package br.com.vraptor.horas.controller;
 
 import javax.inject.Inject;
 

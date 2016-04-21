@@ -15,7 +15,7 @@ public class Usuario {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@NotEmpty
+	@NotEmpty(message="{nome.vazio}")
 	private String nome;
 	
 	@NotEmpty
@@ -27,6 +27,16 @@ public class Usuario {
 	@NotEmpty
 	@Email
 	private String email;
+	
+	public Usuario(){
+	}
+
+	public Usuario(String nome, String login, String senha, String email) {
+		this.nome = nome;
+		this.login = login;
+		this.senha = senha;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;

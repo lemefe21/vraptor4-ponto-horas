@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.filtros;
+package br.com.vraptor.horas.filtros;
 
 import java.io.IOException;
 
