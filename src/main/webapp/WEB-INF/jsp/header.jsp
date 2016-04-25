@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="<c:url value='/bootstrap/css/bootstrap.css'/>"/>
-<title>Sistema de Horas</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/bootstrap/css/bootstrap.css'/>"/>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/bootstrap/css/site.css'/>"/>
+	<title>Sistema de Horas</title>
 </head>
 <body>
 
