@@ -14,6 +14,13 @@
 		<ul class="nav nav-tabs">
 			<li role="presentation"><a href="${linkTo[IndexController].index()}">Home</a></li>
 			<li role="presentation"><a href="${linkTo[UsuarioController].lista()}">Usuários</a></li>
+			<li role="presentation"><a href="${linkTo[HoraLancadaController].lista()}">Horas Cadastradas</a></li>
+			<li role="presentation"><a href="${linkTo[HoraLancadaController].form()}">Cadastrar Horas</a></li>
+			
+			<c:if test="${usuarioLogado.verificaUsuarioLogado}">
+				<li><a href=""></a></li>
+			</c:if>
+			
 		</ul>
 	</nav>
 	

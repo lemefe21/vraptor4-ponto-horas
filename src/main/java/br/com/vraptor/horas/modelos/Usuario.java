@@ -1,5 +1,7 @@
 package br.com.vraptor.horas.modelos;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +11,9 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Usuario {
+public class Usuario implements Serializable{
+
+	private static final long serialVersionUID = -3780761716189782788L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

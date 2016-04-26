@@ -5,6 +5,7 @@ import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 import br.com.vraptor.horas.modelos.Usuario;
 
@@ -35,6 +36,18 @@ public class UsuarioDAO {
 	public List<Usuario>lista(){
 		
 		return manager.createQuery("select u from Usuario u").getResultList();
+		
+	}
+
+	public Usuario busca(String login, String senha) {
+		
+		TypedQuery<Usuario> query = manager.createQuery("select u from Usuario u "
+				+ "where u.login = :login and u.senha = :senha", Usuario.class);
+		
+		query.setParameter(login, login);
+		query.setParameter(senha, senha);
+		
+		return query.getSingleResult();
 		
 	}
 

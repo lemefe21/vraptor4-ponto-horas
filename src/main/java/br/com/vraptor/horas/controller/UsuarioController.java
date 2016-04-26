@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 
 import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.interceptor.IncludeParameters;
 import br.com.caelum.vraptor.validator.Validator;
@@ -33,6 +34,7 @@ public class UsuarioController {
 	}
 	
 	@IncludeParameters
+	@Post
 	public void adiciona(@Valid Usuario usuario){
 		
 		validator.onErrorRedirectTo(this).form();
