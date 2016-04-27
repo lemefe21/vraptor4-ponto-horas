@@ -17,8 +17,11 @@
 			<li role="presentation"><a href="${linkTo[HoraLancadaController].lista()}">Horas Cadastradas</a></li>
 			<li role="presentation"><a href="${linkTo[HoraLancadaController].form()}">Cadastrar Horas</a></li>
 			
-			<c:if test="${usuarioLogado.verificaUsuarioLogado}">
-				<li><a href=""></a></li>
+			<c:if test="${usuarioLogado.logado}">
+				<li><a href="${linkTo[LoginController].deslogaUsuario()}">Deslogar</a></li>
+			</c:if>
+			<c:if test="${!usuarioLogado.logado}">
+				<li><a href="${linkTo[LoginController].form()}">Autenticar</a></li>
 			</c:if>
 			
 		</ul>

@@ -37,7 +37,7 @@ public class AutorizacaoInterceptor {
 	@AroundCall
 	public void intercept(SimpleInterceptorStack stack){
 		
-		if(usuarioLogado.verificaUsuarioLogado()){
+		if(usuarioLogado.isLogado()){
 			stack.next();
 		}else{
 			result.redirectTo(LoginController.class).form();

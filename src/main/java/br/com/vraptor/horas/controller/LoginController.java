@@ -8,6 +8,7 @@ import br.com.caelum.vraptor.validator.SimpleMessage;
 import br.com.caelum.vraptor.validator.Validator;
 import br.com.vraptor.horas.dao.UsuarioDAO;
 import br.com.vraptor.horas.modelos.Usuario;
+import br.com.vraptor.horas.seguranca.Open;
 import br.com.vraptor.horas.seguranca.UsuarioLogado;
 
 @Controller
@@ -30,12 +31,15 @@ public class LoginController {
 		this.validator = validator;
 	}
 	
+	@Open
 	public void form(){
 	}
 	
-	public void autentica(String login, String senha){
+	@Open
+	public void login(String login, String senha){
 		
 		Usuario usuario = usuarioDao.busca(login, senha);
+		
 		//guardar o usuario na sessão
 		if(usuario != null){
 			usuarioLogado.realizaLogin(usuario);
@@ -47,6 +51,7 @@ public class LoginController {
 		
 	}
 	
+	@Open
 	public void deslogaUsuario(){
 		usuarioLogado.desloga();
 		result.redirectTo(this).form();

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
 import br.com.vraptor.horas.modelos.Usuario;
@@ -44,10 +45,14 @@ public class UsuarioDAO {
 		TypedQuery<Usuario> query = manager.createQuery("select u from Usuario u "
 				+ "where u.login = :login and u.senha = :senha", Usuario.class);
 		
-		query.setParameter(login, login);
-		query.setParameter(senha, senha);
+		query.setParameter("login", login);
+		query.setParameter("senha", senha);
 		
-		return query.getSingleResult();
+		try{
+			return query.getSingleResult();
+		}catch(NoResultException e){
+			return null;
+		}
 		
 	}
 

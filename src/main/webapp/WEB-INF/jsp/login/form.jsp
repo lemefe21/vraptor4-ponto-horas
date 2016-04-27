@@ -4,7 +4,7 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp"/>
 
-	<form action="${linkTo[LoginController].autentica(null, null}" method="post">
+	<form action="${linkTo[LoginController].login(null, null)}" method="post">
 	
 		<alura:validationMessage name="login_invalido"/>
 	
@@ -12,7 +12,7 @@
 		<input type="text" name="login" id="login" class="form-control">
 		
 		<label for="senha">Senha:</label>
-		<input type="text" name="senha" id="senha" class="form-control">
+		<input type="password" name="senha" id="senha" class="form-control">
 		
 		<input type="submit" value="Autentica" class="btn">
 	
