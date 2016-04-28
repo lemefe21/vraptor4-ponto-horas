@@ -17,7 +17,7 @@ public class UsuarioDAO {
 
 	@Inject
 	public UsuarioDAO(EntityManager manager){
-		//injetado pelo CDI atraves do Producer
+		//injetado pelo CDI atraves do producer EntityManagerProducer
 		this.manager = manager;
 	}
 	

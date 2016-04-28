@@ -40,8 +40,8 @@ public class LoginController {
 		
 		Usuario usuario = usuarioDao.busca(login, senha);
 		
-		//guardar o usuario na sessão
 		if(usuario != null){
+			//guardar o objeto usuario na session como UsuarioLogado 
 			usuarioLogado.realizaLogin(usuario);
 			result.redirectTo(UsuarioController.class).lista();
 		}else{

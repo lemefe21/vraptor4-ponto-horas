@@ -15,6 +15,10 @@ public class UsuarioLogado implements Serializable{
 	
 	private Usuario usuario;
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
 	public void realizaLogin(Usuario usuario){
 		this.usuario = usuario;
 	}

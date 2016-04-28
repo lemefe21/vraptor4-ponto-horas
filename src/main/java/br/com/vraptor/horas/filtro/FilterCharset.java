@@ -27,7 +27,8 @@ public class FilterCharset implements Filter{
 		request.setCharacterEncoding(UTF_8);
 		
 		System.out.println("Before Encoding Response: " + response.getCharacterEncoding());
-		//ISO-8859-1
+		//response setado como ISO-8859-1
+		
 		response.setCharacterEncoding(UTF_8);
 		System.out.println("Before Set Encoding Response: " + response.getCharacterEncoding());
 		
