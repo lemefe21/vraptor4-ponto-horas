@@ -1,6 +1,9 @@
 package br.com.vraptor.horas.modelos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,21 +23,21 @@ public class HoraLancada {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	
+
 	@NotNull
 	@Temporal(TemporalType.DATE)
 	private Calendar data;
-	
+
 	private String comentario;
-	
+
 	@NotEmpty
 	@Pattern(regexp="\\d{2}:\\d{2}")
 	private String horaInicial;
-	
+
 	@NotEmpty
 	@Pattern(regexp="\\d{2}:\\d{2}")
 	private String horaFinal;
-	
+
 	@ManyToOne
 	private Usuario usuario;
 
@@ -85,6 +88,16 @@ public class HoraLancada {
 	public void setComentario(String comentario) {
 		this.comentario = comentario;
 	}
-	
-	
+
+	public Double getDuracao(){
+		try {
+			SimpleDateFormat format = new SimpleDateFormat("HH:mm");
+			Date fim = format.parse(horaFinal);
+			Date inicio = format.parse(horaInicial);
+			long millis = fim.getTime() - inicio.getTime();
+			return ((double)millis)/(60 * 60 * 1000) ;
+		} catch (ParseException e) {
+			return 0.0;
+		}
+	}
 }

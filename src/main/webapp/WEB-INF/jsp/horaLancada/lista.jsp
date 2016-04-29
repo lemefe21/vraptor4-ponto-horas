@@ -13,6 +13,8 @@
 			  <th>Data</th>
 			  <th>Hora Inicial</th>
 			  <th>Hora Final</th>
+			  <th>Duração</th>
+			  <th>Comentário</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -22,6 +24,8 @@
 					<td>${hora.data.time}</td>
 					<td>${hora.horaInicial}</td>
 					<td>${hora.horaFinal}</td>
+					<td>${hora.duracao}</td>
+					<td>${hora.comentario}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

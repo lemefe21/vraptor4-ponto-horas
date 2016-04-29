@@ -18,6 +18,9 @@
 		<input type="text" id="horaFinal" name="horaLancada.horaFinal" class="form-control"/>
 		<alura:validationMessage name="horaLancada.horaFinal"></alura:validationMessage>
 		
+		<label for="comentario">Comentário</label>
+    	<textarea name="horaLancada.comentario" id="comentario" class="form-control"></textarea>
+		
 		<input type="submit" value="Cadastrar Hora">
 	
 	</form>
