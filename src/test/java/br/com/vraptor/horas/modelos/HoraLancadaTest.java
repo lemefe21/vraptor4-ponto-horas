@@ -1,4 +1,4 @@
-package br.com.vraptor.horas.modelo;
+package br.com.vraptor.horas.modelos;
 
 import org.junit.Assert;
 import org.junit.Test;

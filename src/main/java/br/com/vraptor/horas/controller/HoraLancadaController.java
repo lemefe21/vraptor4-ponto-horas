@@ -1,5 +1,7 @@
 package br.com.vraptor.horas.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.validation.Valid;
 
@@ -8,6 +10,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.validator.Validator;
 import br.com.vraptor.horas.dao.HoraLancadaDao;
 import br.com.vraptor.horas.modelos.HoraLancada;
+import br.com.vraptor.horas.modelos.RelatorioDeHoras;
 import br.com.vraptor.horas.seguranca.UsuarioLogado;
 
 @Controller
@@ -42,5 +45,10 @@ public class HoraLancadaController {
 
 	public void lista() {
 		result.include("horas", dao.listaHoras());
+	}
+	
+	public void relatorioDeHoras(){
+		List<HoraLancada> horas = dao.horasLancadasUsuario(usuarioLogado.getUsuario());
+		new RelatorioDeHoras(horas);
 	}
 }
