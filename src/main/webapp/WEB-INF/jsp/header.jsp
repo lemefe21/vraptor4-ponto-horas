@@ -15,7 +15,7 @@
 			<li role="presentation"><a href="${linkTo[IndexController].index()}">Home</a></li>
 			<li role="presentation"><a href="${linkTo[UsuarioController].lista()}">Usuários</a></li>
 			<li role="presentation"><a href="${linkTo[HoraLancadaController].lista()}">Horas Cadastradas</a></li>
-			<li role="presentation"><a href="${linkTo[HoraLancadaController].form()}">Cadastrar Horas</a></li>
+			<li role="presentation"><a href="${linkTo[HoraLancadaController].relatorioDeHoras()}">Relatório de Horas</a></li>
 			
 			<c:if test="${usuarioLogado.logado}">
 				<li><a href="${linkTo[LoginController].deslogaUsuario()}">Deslogar</a></li>

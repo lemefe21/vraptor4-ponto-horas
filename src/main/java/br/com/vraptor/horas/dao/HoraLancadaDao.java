@@ -35,7 +35,7 @@ public class HoraLancadaDao {
 	}
 
 	public List<HoraLancada> horasLancadasUsuario(Usuario usuario) {
-		String jpql = "select * from HoraLancada h where h.usuario = :usuario "
+		String jpql = "select h from HoraLancada h where h.usuario = :usuario "
 				+ "order by h.data";
 		
 		TypedQuery<HoraLancada> query = manager.createQuery(jpql, HoraLancada.class);

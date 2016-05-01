@@ -1,6 +1,5 @@
 package br.com.vraptor.horas.modelos;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -14,6 +13,7 @@ public class RelatorioDeHorasTest {
 	@Test
 	public void calculaRelatorioQuandoDataSaoIguais(){
 		
+		//mesmo dia
 		Calendar data = new GregorianCalendar(2016, 1, 22);
 		HoraLancada hora1 = novaHoraLancada("10:00", "18:00", data);
 		HoraLancada hora2 = novaHoraLancada("18:00", "20:00", data);
@@ -33,6 +33,7 @@ public class RelatorioDeHorasTest {
 	@Test
 	public void calculaRelatorioQuandoDataSaoDiferentes(){
 		
+		//dias diferentes
 		Calendar data1 = new GregorianCalendar(2016, 1, 21);
 		Calendar data2 = new GregorianCalendar(2016, 1, 22);
 		HoraLancada hora1 = novaHoraLancada("10:00", "18:00", data1);
